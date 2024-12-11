@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*header{
+    height: 65px;
+    background-color: #012847;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}*/
+
+header {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    /*justify-content: space-between; /* Distribuye el espacio entre el botón y el título */
+    align-items: center; /* Alinea verticalmente el botón y el título */
+    padding: 0 1rem; /* Agrega espacio horizontal interno */
+    background-color: #012847; /* Opcional: color de fondo */
+    color: white;
+    height: 65px; /* Define una altura fija para el header */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para separación visual */
+}
+
+header h3 {
+    font-size: 1rem; /* Ajusta el tamaño de fuente del título si es necesario */
+    margin: 0 0 0 1rem; /* Agrega margen izquierdo entre el título y el botón */
+    text-align: center; /* Centra el texto del título */
+    /*flex: 1;  Opcional: permite que el título ocupe espacio restante */
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra las líneas verticalmente */
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+    cursor: pointer; /* Cambia el cursor al pasar por el botón */
+}
+
+button > div{
+    background: white;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+button:hover div:first-child{
+    transform: rotate(45deg);
+}
+
+button:hover div:nth-child(2){
+    opacity: 0;
+}
+
+button:hover div:last-child{
+    transform: rotate(-45deg);
+}
+
+.menu-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el botón y el nombre */
+    gap: 1rem; /* Espaciado entre el botón y el título */
+    position: relative;  /* Posiciona el contenedor de manera relativa */
+}
+
+h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Mostrar menú al pasar el mouse sobre el contenedor */
+.menu-container:hover nav {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+/* Menú desplegable */
+nav {
+    position: absolute;
+    top: 65px; /* Justo debajo del header */
+    left: 0; /* Ajusta la posición del menú respecto al botón */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    overflow: hidden;
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+/* Mostrar menú al pasar el mouse sobre el botón */
+button:hover + h3 + nav {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
+}
+
+/* Lista del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #012847;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #012847;
+    color: white;
+}
+
+.cara {
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+    height: 200px; /* Mantiene la altura */
+    width: 200px; /* Asegura que el ancho sea proporcional */
+    border: 5px solid white; /* Agrega un borde blanco de 5px */
+}
+
+.uno {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: calc(100vh - 65px);
+    background-color: #5b5c6165;
+    background-image: url("BackgroundImage.jpg"); /* Cambia "ruta-de-tu-imagen.jpg" por la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen en la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white;
+}
+
+.caja-central{
+    margin-top: 10%;
+    margin-left: 5%; 
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 50%;
+}
+.caja-cara{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #012847;
+}
+.caja-presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #F2F2F2;
+    color: #303030;
+    padding: 10px;
+}
+
+.dos{
+    background-color: #F2F2F2;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #303030;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.aptitudes{
+    width: 50%;
+}
+
+/*.tech-list{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.tech{
+    height: 90px;
+}*/
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaciado entre las imágenes */
+}
+
+.tech-list img {
+    width: 150px; /* Tamaño base de las imágenes */
+    height: auto; /* Mantiene las proporciones */
+    border: 2px solid #0589f5; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    padding: 5px; /* Espacio interno entre la imagen y el borde */
+    transition: transform 0.1s ease, border-color 0.1s ease; /* Animación para hover */
+    /*filter: brightness(0.9); /* Hace que las imágenes no seleccionadas sean un poco más oscuras */
+}
+
+.tech-list img:hover {
+    transform: scale(1.20); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    border: 2px solid #6f00ff; /* Cambia el color del borde a azul en hover */
+    /*filter: brightness(1); /* Devuelve el brillo normal de la imagen */
+    z-index: 1; /* Asegura que la imagen ampliada esté por encima de las demás */
+}
+
+.tres{
+    background-color: #F2F2F2;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+}
+.proyectos{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las cards */
+}
+.card{
+    text-align: center;
+    width: 60%;
+    border: solid #000000 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.card img{
+    width: 100%;
+}
+.card a, footer a {
+    color: rgb(0, 0, 0);
+}
+
+.red-social{
+    height: 60px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #012847;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #F2F2F2;
+    height: 250px;
+}
+.contacto{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .caja-central{
+        width: 90%;
+        height: 70%;
+        flex-direction: column;
+    }
+    .caja-cara{
+        width: 100%;
+        height: 50%;
+    }
+    .caja-presentacion{
+        width: 100%;
+        height: 50%;
+        align-items: flex-start;
+    }
+    .aptitudes{
+        width: auto;
+    }
+    .dos{
+        height: auto;
+        padding: 0 10px 10px 10px;
+
+    }
+    .tres{
+        height: auto;
+    }
+    .proyectos{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    .card{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .red-social{
+        margin: 0 10px 0 10px;
+    }
+}
