@@ -182,17 +182,43 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-.dos{
-    background-color: #F2F2F2;
-    height: 350px;
+.cuatro{
+    background-color: #312828;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #303030;
+    color: #ffffff;
     padding-left: 20%;
     padding-right: 20%;
 }
+
+.dos{
+    background-color: #312828;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+.cinco{
+    background-color: #312828;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 .aptitudes{
     width: 50%;
 }
@@ -220,24 +246,24 @@ nav ul li a:hover {
     border-radius: 8px; /* Bordes redondeados (opcional) */
     padding: 5px; /* Espacio interno entre la imagen y el borde */
     transition: transform 0.1s ease, border-color 0.1s ease; /* Animación para hover */
-    /*filter: brightness(0.9); /* Hace que las imágenes no seleccionadas sean un poco más oscuras */
+    filter: brightness(0.5); /* Hace que las imágenes no seleccionadas sean un poco más oscuras */
 }
 
 .tech-list img:hover {
     transform: scale(1.20); /* Aumenta ligeramente el tamaño al pasar el cursor */
     border: 2px solid #6f00ff; /* Cambia el color del borde a azul en hover */
-    /*filter: brightness(1); /* Devuelve el brillo normal de la imagen */
+    filter: brightness(1); /* Devuelve el brillo normal de la imagen */
     z-index: 1; /* Asegura que la imagen ampliada esté por encima de las demás */
 }
 
 .tres{
-    background-color: #F2F2F2;
+    background-color: #312828;
     height: 600px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    color: #000000;
+    color: #ffffff;
 }
 .proyectos{
     width: 90%;
@@ -248,7 +274,7 @@ nav ul li a:hover {
 .card{
     text-align: center;
     width: 60%;
-    border: solid #000000 1px;
+    border: solid #ffffff 1px;
     border-radius: 10px;
     padding: 10px;
 }
@@ -256,13 +282,166 @@ nav ul li a:hover {
     width: 100%;
 }
 .card a, footer a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
-.red-social{
-    height: 60px;
-    background-color: #F2F2F2;
+.estudios {
+    /*background-color: #2A2A2A; Color de fondo diferente para la sección */
+    padding: 40px 0; /* Espaciado superior e inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+}
+
+.estudios .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.estudios .cursos {
+    width: 100%; /* Usa todo el ancho disponible */
+    max-width: 1200px; /* Ancho máximo para la estructura */
+    margin: 0 auto; /* Centra el contenedor */
+    display: flex;
+    flex-wrap: wrap; /* Permite apilar si no cabe */
+    gap: 20px; /* Espacio entre las cards */
+    justify-content: center; /* Centra las cards en la última fila */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+}
+
+.card-curso {
+    flex: 0 1 calc(33.333% - 20px); /* Calcula el tamaño de las cards */
+    box-sizing: border-box; /* Asegúrate de incluir padding y border en el cálculo */
+    max-width: calc(33.333% - 20px); /* Limita el ancho máximo */
+    min-width: 250px; /* Tamaño mínimo para mantener el diseño */
+    text-align: center;
+    border: solid #000000 1px;
     border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.card-curso img {
+    width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Define una altura fija o relativa */
+    object-fit: cover; /* Ajusta la imagen para que llene el espacio sin deformarse */
+    border-radius: 8px; /* Mantiene esquinas redondeadas */
+}
+
+.card-curso h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card-curso p {
+    font-size: 0.9rem;
+    color: #020000; /* Texto más claro para la descripción */
+}
+
+.card-curso a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid;
+}
+
+/* Estilo específico para el botón de enviar mail */
+.btn-mail {
+    background-color: #f32121; /* Azul */
+    color: #ffffff; /* Blanco */
+    background-color: #f32121; /* Azul */
+}
+
+/* Efecto hover del botón de enviar mail */
+.btn-mail:hover {
+    background-color: #f32121; /* Azul */
+    background-color: #f32121; /* Azul */
+}
+
+/* Botón general */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid;
+}
+
+/* Estilo específico para el botón de descarga */
+.btn-download {
+    background-color: #4CAF50; /* Verde */
+    color: #ffffff; /* Blanco */
+    border-color: #4CAF50;
+}
+
+.btn-download:hover {
+    background-color: #45a049; /* Verde oscuro en hover */
+    border-color: #45a049;
+}
+
+
+/* Estilos generales para los botones */
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff !important; /* Fuerza el color blanco */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid;
+}
+
+/* Botón azul claro */
+a.btn-light-blue {
+    background-color: #00bfff;
+    border-color: #00bfff;
+}
+
+a.btn-light-blue:hover {
+    background-color: #009acd;
+    border-color: #009acd;
+}
+
+/* Botón morado */
+a.btn-purple {
+    background-color: #800080;
+    border-color: #800080;
+}
+
+a.btn-purple:hover {
+    background-color: #660066;
+    border-color: #660066;
+}
+
+
+.red-social {
+    height: 60px;
+    /*background-color: #ffffff;*/
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 footer{
