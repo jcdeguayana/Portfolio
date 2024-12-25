@@ -153,6 +153,8 @@ nav ul li a:hover {
     background-position: center; /* Centra la imagen en la sección */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: white;
+    padding-bottom: 3%;
+    padding-left: 3%;
 }
 
 /*.caja-central{
