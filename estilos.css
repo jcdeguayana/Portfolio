@@ -222,9 +222,10 @@ nav ul li a:hover {
     color: #ffffff;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 10%;
 }
 
-.dos{
+/*.dos{
     background-color: #312828;
     height: 500px;
     display: flex;
@@ -234,7 +235,37 @@ nav ul li a:hover {
     color: #ffffff;
     padding-left: 20%;
     padding-right: 20%;
+}*/
+
+.dos {
+    background-color: #312828;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
+
+/*.dos {
+    background-color: #312828; /* Mantiene el color de fondo específico 
+    color: #ffffff;
+    height: auto; /* Ajusta automáticamente la altura al contenido 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 20%; /* Espaciado interno superior e inferior 
+}*/
+
+/*section {
+    margin-bottom: 3rem;  /*Espaciado uniforme entre secciones*
+}*/
+
 
 .aptitudes{
     width: 50%;
@@ -250,21 +281,39 @@ nav ul li a:hover {
     height: 90px;
 }*/
 
-.tech-list {
+/*.tech-list {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Espaciado entre las imágenes */
+    gap: 1rem; /* Espaciado entre las imágenes 
 }
 
 .tech-list img {
-    width: 150px; /* Tamaño base de las imágenes */
-    height: auto; /* Mantiene las proporciones */
-    border: 2px solid #0589f5; /* Borde gris claro */
-    border-radius: 8px; /* Bordes redondeados (opcional) */
-    padding: 5px; /* Espacio interno entre la imagen y el borde */
-    transition: transform 0.1s ease, border-color 0.1s ease; /* Animación para hover */
-    filter: brightness(0.5); /* Hace que las imágenes no seleccionadas sean un poco más oscuras */
+    width: 150px; 
+    height: auto; 
+    border: 2px solid #0589f5; 
+    border-radius: 8px; 
+    padding: 5px; 
+    transition: transform 0.1s ease, border-color 0.1s ease; 
+    filter: brightness(0.5); 
+}*/
+
+.tech-list {
+    display: flex; /* Crea una fila horizontal */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    justify-content: center; /* Centra los elementos en el contenedor */
+    gap: 1rem; /* Espaciado uniforme entre las imágenes */
 }
+
+.tech-list img {
+    max-width: 150px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantén la proporción original */
+    border: 2px solid #0589f5; 
+    border-radius: 8px; 
+    padding: 5px; 
+    transition: transform 0.1s ease, border-color 0.1s ease; 
+    filter: brightness(0.5);
+}
+
 
 .tech-list img:hover {
     transform: scale(1.20); /* Aumenta ligeramente el tamaño al pasar el cursor */
@@ -331,6 +380,7 @@ nav ul li a:hover {
     align-items: center;
     color: #000000;
     margin: 0 auto;
+    margin-right: 17%;
     max-width: 1200px; /* Define un ancho máximo */
 }
 
