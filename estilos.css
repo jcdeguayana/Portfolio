@@ -155,16 +155,46 @@ nav ul li a:hover {
     color: white;
 }
 
-.caja-central{
+/*.caja-central{
     margin-top: 10%;
-    margin-left: 5%; 
+    margin-left: 26%;
     width: 50%;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
     overflow: hidden;
     height: 50%;
+}*/
+
+.caja-central {
+    margin-top: 10%;
+    margin-left: auto; /* Ajustado para que se centre automáticamente */
+    margin-right: auto; /* Ajustado para que se centre automáticamente */
+    width: 90%; /* Aumenté el ancho para aprovechar más el espacio */
+    max-width: 50%; /* El tamaño máximo sigue siendo del 50% en pantallas grandes */
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    height: auto; /* Mantiene la altura ajustada al contenido */
 }
+
+/* Asegura que la caja se ajuste bien en pantallas pequeñas */
+@media (max-width: 768px) {
+    .caja-central {
+        margin-left: 5%; /* Reduce los márgenes en pantallas pequeñas */
+        margin-right: 5%; /* Reduce los márgenes en pantallas pequeñas */
+        width: 90%; /* Mantén el ancho grande en pantallas pequeñas */
+        max-width: 90%; /* Permite que ocupe más espacio en pantallas pequeñas */
+        height: auto; /* Ajusta la altura según el contenido */
+    }
+
+     #sobre-mi {
+        padding-top: 70px; /* Agrega más espacio en la parte superior de la sección "Sobre mí" */
+    }
+}
+
+
 .caja-cara{
     display: flex;
     justify-content: center;
@@ -197,19 +227,6 @@ nav ul li a:hover {
 .dos{
     background-color: #312828;
     height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-
-.cinco{
-    background-color: #312828;
-    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,13 +302,36 @@ nav ul li a:hover {
     color: rgb(255, 255, 255);
 }
 
-.estudios {
-    /*background-color: #2A2A2A; Color de fondo diferente para la sección */
-    padding: 40px 0; /* Espaciado superior e inferior */
+.cinco{
+    background-color: #312828;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+}
+
+/*.estudios {
+    background-color: #2A2A2A;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #000000;
+}*/
+
+.estudios {
+    padding: 20px 0; /* Reduce el espacio superior e inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    margin: 0 auto;
+    max-width: 1200px; /* Define un ancho máximo */
 }
 
 .estudios .titulo {
@@ -302,12 +342,23 @@ nav ul li a:hover {
     color: #000000;
 }
 
+/*.estudios .cursos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduce el espacio entre las cards 
+    justify-content: center;
+    box-sizing: border-box;
+}*/
+
 .estudios .cursos {
     width: 100%; /* Usa todo el ancho disponible */
     max-width: 1200px; /* Ancho máximo para la estructura */
     margin: 0 auto; /* Centra el contenedor */
     display: flex;
-    flex-wrap: wrap; /* Permite apilar si no cabe */
+    flex-wrap: wrap; /* Permite apilar las tarjetas si no caben */
     gap: 20px; /* Espacio entre las cards */
     justify-content: center; /* Centra las cards en la última fila */
     box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
@@ -326,11 +377,27 @@ nav ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
+
+/*.card-curso {
+    flex: 0 1 calc(30% - 20px); /* Reduce el ancho 
+    max-width: calc(30% - 20px);
+    min-width: 200px;
+    min-height: 20px; /* Altura mínima para mayor consistencia 
+    height: auto; /* Permite que crezca si es necesario 
+    text-align: center;
+    border: solid #000000 1px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita desbordamientos
+}*/
+
 .card-curso img {
-    width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
-    height: 200px; /* Define una altura fija o relativa */
-    object-fit: cover; /* Ajusta la imagen para que llene el espacio sin deformarse */
-    border-radius: 8px; /* Mantiene esquinas redondeadas */
+    width: 100%;  
+    height: auto;  
+    object-fit: cover;  
+    border-radius: 8px;   
 }
 
 .card-curso h3 {
@@ -340,7 +407,7 @@ nav ul li a:hover {
 
 .card-curso p {
     font-size: 0.9rem;
-    color: #020000; /* Texto más claro para la descripción */
+    color: #020000;
 }
 
 .card-curso a {

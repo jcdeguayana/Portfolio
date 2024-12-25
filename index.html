@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
-    <title>Hola 🔥</title>
+    <title>Mi Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5sAR7xN1Nv6eix43a4t7VsycTYMGOeGfeSts0jMZ3Xz5LRxjKAX4nXNh2yd2ePRy" crossorigin="anonymous">
+
 
 </head>
 
@@ -19,6 +21,8 @@
 </style>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-puFPFoj4eQOT69iXWChwGOFIE9bP2lJhJoY/4XNEhgj28sFfQdQmWJuuZrI+ST3z" crossorigin="anonymous"></script>
+
     <header>
         <div class="menu-container">
         <button>
@@ -38,7 +42,8 @@
     </nav>
         </div>
     </header>
-    <section class="uno">
+    
+    <!--<section class="uno">
         <div class="caja-central">
             <div class="caja-cara">
                 <img class="cara" src="Juan Carlos de Guayana.jpg" alt="Juan Muñoz">            
@@ -59,8 +64,42 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="sobre-mi" class="cuatro">
+    </section>-->
+
+    <section class="uno">
+        <div class="container">
+            <!-- Caja central unificada para la cara y la presentación -->
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-md-8">
+                    <div class="caja-central d-flex flex-column flex-md-row align-items-center" style="min-height: 300px;">
+                        <!-- Imagen de la cara -->
+                        <div class="caja-cara">
+                            <img class="cara img-fluid" src="Juan Carlos de Guayana.jpg" alt="Juan Muñoz">
+                        </div>
+                        <!-- Presentación -->
+                        <div class="caja-presentacion ms-md-4 mt-4 mt-md-0 d-flex flex-column justify-content-between" style="flex-grow: 1;">
+                            <div>
+                                <h1>Hola ☕</h1>
+                                <p class="presentacion">
+                                    Cómo va? Mi nombre es Max y estás viendo la plantilla que armé para regalarte y que puedas 
+                                    tomar como punto de partida para armar tu portfolio personal. Espero te sea de mucha utilidad!
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="CV.pdf" class="btn btn-download btn-primary" download>Descargar CV</a>
+                                        <a href="mailto:jcdeguayanamunozsalas@gmail.com?subject=Asunto%20del%20Correo&body=Mensaje%20aquí" class="btn btn-mail btn-secondary">
+                                            Enviar Email
+                                        </a>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+
+    <!--<section id="sobre-mi" class="cuatro">
         <h2>Sobre mí</h2>
         <p>
             Acá tenés que poner una breve introducción sobre vos, sobre tu perfil y qué hacés. Por ejemplo:
@@ -69,8 +108,25 @@
             Otra: soy estudiante de programación en la x universidad, curso x carrera, estoy en x año... tengo
             conocimientos en.... he realizado... bla bla.
         </p>
+    </section>-->
+
+    <section id="sobre-mi" class="cuatro" class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8"> <!-- Columna que ocupa todo el ancho en pantallas pequeñas y hasta el 8 en pantallas medianas y grandes -->
+                <h2 class="text-center">Sobre mí</h2>
+                <p class="text-center">
+                    Acá tenés que poner una breve introducción sobre vos, sobre tu perfil y qué hacés. Por ejemplo:
+                    Soy estudiante autodidacta de programación desde febrero 2021. He realizado algunos cursos como 
+                    bla y bla con ble y bli en blo y blu... y un toque más, 3, 4, 5 renglones.
+                    Otra: soy estudiante de programación en la x universidad, curso x carrera, estoy en x año... tengo
+                    conocimientos en.... he realizado... bla bla.
+                </p>
+            </div>
+        </div>
     </section>
-    <section id="Aptitudes" class="dos">
+    
+
+    <!--<section id="Aptitudes" class="dos">
         <h2>Aptitudes</h2>
         <p>
             Estas son algunas de las tecnologías de las que tengo conocimientos.
@@ -87,8 +143,34 @@
                 <img src="ave8vhl4c.webp" class="tech-list img" alt="">
             </div>
         </div>
+    </section>-->
+
+    <section id="Aptitudes" class="dos">
+        <h2 class="text-center">Aptitudes</h2>
+        <p class="text-center">
+            Estas son algunas de las tecnologías de las que tengo conocimientos.
+        </p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="aptitudes d-flex flex-column align-items-center">
+                        <div class="tech-list mb-4">
+                            <img src="https://www.horuss.com.mx/wp-content/uploads/2019/04/c.png" class="img-fluid mb-3" alt="C#">
+                            <img src="NET-Framework-Logo.jpg" class="img-fluid mb-3" alt=".NET Framework">
+                            <img src="github-logo-git-hub-icon-on-white-background-free-vector.jpg" class="img-fluid mb-3" alt="GitHub">
+                        </div>
+                        <div class="tech-list">
+                            <img src="https://img.icons8.com/color/480/microsoft-sql-server.png" class="img-fluid mb-3" alt="SQL Server">
+                            <img src="sql-thumbnail.png" class="img-fluid mb-3" alt="SQL">
+                            <img src="ave8vhl4c.webp" class="img-fluid mb-3" alt="Git">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="Estudios" class="cinco">
+
+    <!--<section id="Estudios" class="cinco">
         <h2>Mis Estudios</h2>
         <div class="estudios">
             <div class="cursos">
@@ -115,6 +197,49 @@
                     <h3>Git y GitHub</h3>
                     <br>
                     <a href="https://todocodeacademy.com/course/git-y-github-desde-cero/" class="btn btn-light-blue">Ver más</a>
+                    <br><br>
+                    <a href="certificado-git-y-github-wmx5r8ttwwdl.html" class="btn btn-purple">Certificado</a>
+                </div>
+                <div class="card-curso">
+                    <img src="JA.png" alt="Imagen">
+                    <h3>Junior Achievement Argentina</h3>
+                    <a href="https://miprimersitioweb.org.ar/inscripciones/" class="btn btn-light-blue">Ver más</a>
+                    <br><br>
+                    <a href="Certificado Yo puedo programar - Juan Carlos de Guayana Muñoz Salas.pdf" class="btn btn-purple">Certificado</a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    
+    
+    
+    
+    <section id="Estudios" class="cinco">
+        <h2>Mis Estudios</h2>
+        <div class="estudios">
+            <div class="cursos">
+                <div class="card-curso">
+                    <img src="UTN.jpg" alt="Imagen">
+                    <h3>UTN - Tecnicatura Universitaria en Programación</h3>
+                    <a href="https://www.frgp.utn.edu.ar/carreras/tup_tuss" class="btn btn-light-blue">Ver más</a>
+                </div>
+                <div class="card-curso">
+                    <img src="Fundamentos.jpg" alt="Imagen">
+                    <h3>Fundamentos de la Programación</h3>
+                    <br>
+                    <a href="https://maxiprograma.com/CourseDetails?IdCurso=1" class="btn btn-light-blue">Ver más</a>
+                </div>
+                <div class="card-curso">
+                    <img src="NET-Framework-Logo.jpg" alt="Imagen">
+                    <h3>Curso C# Nivel 2</h3>
+                    <h3>POO + NET + SQL</h3>
+                    <a href="https://maxiprograma.com/CourseDetails?IdCurso=3" class="btn btn-light-blue">Ver más</a>
+                </div>
+                <div class="card-curso">
+                    <img src="git-and-github.webp" alt="Imagen">
+                    <h3>Git y GitHub</h3>
+                    <br>
+                    <a href="https://todocodeacademy.com/course/git-y-github-desde-cero/" class="btn btn-light-blue">Ver más</a>
                     <br>
                     <br>
                     <a href="certificado-git-y-github-wmx5r8ttwwdl.html" class="btn btn-purple">Certificado</a>
@@ -122,6 +247,7 @@
                 <div class="card-curso">
                     <img src="JA.png" alt="Imagen">
                     <h3>Junior Achievement Argentina</h3>
+                    <br>
                     <a href="https://miprimersitioweb.org.ar/inscripciones/" class="btn btn-light-blue">Ver más</a>
                     <br>
                     <br>
@@ -130,6 +256,8 @@
             </div>
         </div>
     </section>
+    
+
     <section id="proyectos" class="tres">
         <h2>Mis Proyectos</h2>
         <div class="proyectos">
@@ -159,6 +287,7 @@
             </div>
         </div>
     </section>
+
     <section id="contacto">
     <footer>
         <h2>Contactame</h2>
@@ -167,7 +296,7 @@
                     <img src="https://img.icons8.com/ios_filled/512/FFFFFF/linkedin.png" class="red-social" alt="">
                 </a>
                 <hr>
-                <a href="https://instagram.com/maxiprograma/" target="_blank">
+                <a href="https://www.instagram.com/jcdeguayanamunozsalas/profilecard/?igsh=czhpazBnczY4dGln" target="_blank">
                     <img src="https://static.vecteezy.com/system/resources/previews/019/834/279/non_2x/essential-interface-icon-vector.jpg" class="red-social" alt="">
                 </a>
                 <hr>
