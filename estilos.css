@@ -22,7 +22,8 @@ header {
     color: white;
     height: 65px; /* Define una altura fija para el header */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para separación visual */
-    width: 100%;
+    width: 100ww;
+    /*overflow: hidden;*/
 }
 
 header h3 {
@@ -233,6 +234,7 @@ nav ul li a:hover {
 
 .cuatro {
     background-color: #312828;
+    background-size: cover;
     min-height: 200px; /* Asegura un mínimo pero permite crecer */
     display: flex;
     flex-direction: column;
@@ -260,6 +262,7 @@ nav ul li a:hover {
 
 .dos {
     background-color: #312828;
+    background-size: cover;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -270,7 +273,7 @@ nav ul li a:hover {
     padding-right: 20%;
     padding-top: 2%;
     padding-bottom: 10%;
-    /*width: 100ww;*/
+    width: 100ww;
     overflow: hidden;
 }
 
@@ -347,6 +350,7 @@ nav ul li a:hover {
 
 .tres{
     background-color: #312828;
+    background-size: cover;
     height: 600px;
     display: flex;
     justify-content: flex-start;
@@ -378,6 +382,7 @@ nav ul li a:hover {
 
 .cinco{
     background-color: #312828;
+    background-size: cover;
     min-height: 900px;
     display: flex;
     flex-direction: column;
@@ -386,7 +391,7 @@ nav ul li a:hover {
     color: #ffffff;
     padding-left: 15%;
     padding-right: 5%;
-    /*width: 100ww;*/
+    width: 100ww;
    overflow: hidden;
 }
 
@@ -593,6 +598,7 @@ a.btn-purple:hover {
 
 footer{
     background-color: #012847;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
