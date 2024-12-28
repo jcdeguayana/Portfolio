@@ -22,7 +22,7 @@ header {
     color: white;
     height: 65px; /* Define una altura fija para el header */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para separación visual */
-    width: 100ww;
+    width: 100%;
     /*overflow: hidden;*/
 }
 
