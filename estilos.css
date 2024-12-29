@@ -3,6 +3,16 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+* {
+
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 /*header{
     height: 65px;
     background-color: #012847;
@@ -19,6 +29,7 @@ header {
     align-items: center; /* Alinea verticalmente el botón y el título */
     padding: 0 1rem; /* Agrega espacio horizontal interno */
     background-color: #012847; /* Opcional: color de fondo */
+    background-size: cover;
     color: white;
     height: 65px; /* Define una altura fija para el header */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para separación visual */
@@ -155,10 +166,9 @@ nav ul li a:hover {
     background-position: center; /* Centra la imagen en la sección */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: white;
-    padding-bottom: 3%;
+    padding-top: 1%;
+    padding-bottom: 20%;
     padding-left: 3%;
-    width: 100ww;
-    overflow: hidden;
 }
 
 /*.caja-central{
@@ -174,6 +184,7 @@ nav ul li a:hover {
 
 .caja-central {
     margin-top: 10%;
+    margin-bottom: 10%;
     margin-left: auto; /* Ajustado para que se centre automáticamente */
     margin-right: auto; /* Ajustado para que se centre automáticamente */
     width: 90%; /* Aumenté el ancho para aprovechar más el espacio */
@@ -185,20 +196,38 @@ nav ul li a:hover {
     height: auto; /* Mantiene la altura ajustada al contenido */
 }
 
-/* Asegura que la caja se ajuste bien en pantallas pequeñas */
+/* Asegura que la caja se ajuste bien en pantallas pequeñas 
 @media (max-width: 768px) {
     .caja-central {
-        margin-left: 5%; /* Reduce los márgenes en pantallas pequeñas */
-        margin-right: 5%; /* Reduce los márgenes en pantallas pequeñas */
-        width: 90%; /* Mantén el ancho grande en pantallas pequeñas */
-        max-width: 90%; /* Permite que ocupe más espacio en pantallas pequeñas */
-        height: auto; /* Ajusta la altura según el contenido */
+        margin-left: 5%; /* Reduce los márgenes en pantallas pequeñas 
+        margin-right: 5%; /* Reduce los márgenes en pantallas pequeñas 
+        width: 90%; /* Mantén el ancho grande en pantallas pequeñas 
+        max-width: 90%; /* Permite que ocupe más espacio en pantallas pequeñas 
+        height: auto; /* Ajusta la altura según el contenido 
     }
 
      #sobre-mi {
-        padding-top: 70px; /* Agrega más espacio en la parte superior de la sección "Sobre mí" */
+        padding-top: 70px;  Agrega más espacio en la parte superior de la sección "Sobre mí"
+    }
+}*/
+
+@media (max-width: 768px) {
+    .caja-central {
+        margin-left: auto; /* Centra automáticamente */
+        margin-right: auto; /* Centra automáticamente */
+        margin-top: 5%; /* Añade un poco de espacio superior */
+        margin-bottom: 5%; /* Añade espacio inferior */
+        width: 95%; /* Aprovecha más espacio horizontal */
+        max-width: none; /* Elimina la restricción máxima para pantallas pequeñas */
+        height: auto; /* Asegúrate de que la altura se ajuste al contenido */
     }
 }
+@media (max-width: 768px) {
+    #sobre-mi {
+        padding-top: 100px; /* Incrementa el espacio en la parte superior */
+    }
+}
+
 
 
 .caja-cara{
@@ -593,7 +622,7 @@ a.btn-purple:hover {
     height: 60px;
     /*background-color: #ffffff;*/
     border-radius: 10px;
-    margin: 0 10px;
+    /*margin: 0 10px;*/
 }
 
 footer{
@@ -605,13 +634,18 @@ footer{
     align-items: center;
     color: #F2F2F2;
     height: 250px;
-    width: 100ww;
+    width: 100%;
     overflow: hidden;
 }
+
 .contacto{
-    width: 30%;
+    width: 100%;
+    max-width: 600px; /* Opcional: restringe el ancho máximo */
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
+    justify-content: space-between; /* Ajusta el espaciado entre elementos */
+    /*gap: 1px;  Espaciado uniforme entre los elementos */
+    /*margin: 0 auto; Centra horizontalmente si hay ancho máximo */
 }
 
 @media (max-width: 1000px) {
@@ -623,6 +657,8 @@ footer{
     .caja-cara{
         width: 100%;
         height: 50%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
     .caja-presentacion{
         width: 100%;
