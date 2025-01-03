@@ -44,17 +44,17 @@ header h3 {
     /*flex: 1;  Opcional: permite que el título ocupe espacio restante */
 }
 
-button {
+/*button {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra las líneas verticalmente */
+    justify-content: center; 
     align-items: center;
     width: 3rem;
     height: 3rem;
     border: 0;
     background: transparent;
     gap: 0.65rem;
-    cursor: pointer; /* Cambia el cursor al pasar por el botón */
+    cursor: pointer; /* Cambia el cursor al pasar por el botón 
 }
 
 button > div{
@@ -80,9 +80,9 @@ button:hover div:last-child{
 
 .menu-container {
     display: flex;
-    align-items: center; /* Alinea verticalmente el botón y el nombre */
-    gap: 1rem; /* Espaciado entre el botón y el título */
-    position: relative;  /* Posiciona el contenedor de manera relativa */
+    align-items: center; /* Alinea verticalmente el botón y el nombre 
+    gap: 1rem; /* Espaciado entre el botón y el título 
+    position: relative;  /* Posiciona el contenedor de manera relativa 
 }
 
 h3 {
@@ -90,36 +90,36 @@ h3 {
     font-size: 1rem;
 }
 
-/* Mostrar menú al pasar el mouse sobre el contenedor */
+/* Mostrar menú al pasar el mouse sobre el contenedor 
 .menu-container:hover nav {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
 }
 
-/* Menú desplegable */
+/* Menú desplegable 
 nav {
     position: absolute;
-    top: 65px; /* Justo debajo del header */
-    left: 0; /* Ajusta la posición del menú respecto al botón */
+    top: 65px; /* Justo debajo del header 
+    left: 0; /* Ajusta la posición del menú respecto al botón 
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px;
     overflow: hidden;
-    visibility: hidden; /* Oculto por defecto */
-    opacity: 0; /* Oculto por defecto */
+    visibility: hidden; /* Oculto por defecto 
+    opacity: 0; /* Oculto por defecto 
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
 }
 
-/* Mostrar menú al pasar el mouse sobre el botón */
+/* Mostrar menú al pasar el mouse sobre el botón 
 button:hover + h3 + nav {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0s;
 }
 
-/* Lista del menú */
+/* Lista del menú 
 nav ul {
     list-style: none;
     padding: 0;
@@ -145,7 +145,143 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #012847;
     color: white;
+}*/
+
+/* Ocultar el checkbox */
+#menu-toggle {
+    display: none;
 }
+
+/* Botón de menú */
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+    cursor: pointer;
+}
+
+.menu-button > div {
+    background: white;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+/* Estado activo del botón */
+#menu-toggle:checked + .menu-button > div:first-child {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button > div:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-button > div:last-child {
+    transform: rotate(-45deg);
+}
+
+/* Contenedor del menú */
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Panel del menú 
+.menu-panel {
+    position: fixed; /*Cambiado a fixed para que ocupe toda la pantalla 
+    top: 65px;
+    left: 0;
+    width: 100%;  Ancho completo 
+    height: calc(100vh - 65px);  Altura completa de la pantalla menos el header 
+    background-color: #012847;  Opcional: color de fondo 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);  Oculto por defecto, fuera de la vista 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex; /* Flex para centrar los elementos 
+    align-items: center; /* Centrar verticalmente 
+    justify-content: center; /* Centrar horizontalmente 
+    z-index: 1000; /* Asegura que el panel esté sobre otros elementos 
+}*/
+
+/* Panel del menú */
+.menu-panel {
+    position: absolute; /* Cambiado a absolute para que se ajuste al contenedor */
+    top: 65px;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 680px; /* Altura fija para limitar el menú */
+    background-color: #012847; /* Opcional: color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%); /* Oculto por defecto, fuera de la vista */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /*overflow-y: auto;  Añadido para permitir desplazamiento si los ítems exceden la altura */
+    display: flex; /* Flex para alinear contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    z-index: 1000; /* Asegura que el panel esté sobre otros elementos */
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+#menu-toggle:checked ~ .menu-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Desplazar a la posición inicial */
+}
+
+/* Lista del menú */
+.menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+/* Elementos del menú */
+.menu-panel ul li {
+    margin-bottom: 2px; /* Espaciado entre elementos */
+}
+
+.menu-panel ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-panel ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding-top: 2px;
+    padding-bottom: 50px;
+    font-size: 1.0rem; /* Tamaño de fuente más grande */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px; /* Bordes redondeados para mejor apariencia */
+}
+
+
+/* Cerrar menú al hacer clic en un ítem 
+.menu-panel ul li a {
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}*/
+
+/*.menu-panel ul li a:active + #menu-toggle {
+    visibility: hidden;
+    opacity: 0;
+}*/
 
 .cara {
     border-radius: 50%; /* Asegura que la imagen sea circular */
