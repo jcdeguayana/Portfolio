@@ -194,6 +194,8 @@ nav ul li a:hover {
     align-items: center;
     gap: 1rem;
     position: relative;
+    padding-left: 20px;
+    padding-right: 5px;
 }
 
 /* Panel del menú 
@@ -531,15 +533,52 @@ nav ul li a:hover {
     justify-content: space-between;
     gap: 20px; /* Espacio entre las cards */
 }
-.card{
+.card {
+    position: relative;
     text-align: center;
     width: 60%;
     border: solid #ffffff 1px;
     border-radius: 10px;
     padding: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card a {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    margin: 5px;
+    pointer-events: none; /* Opcional: evita que se cliqueen mientras son invisibles */
+}
+
+.card:hover a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Se activa el clic al aparecer */
+}
+
+
+/*.card{
+    text-align: center;
+    width: 60%;
+    border: solid #ffffff 1px;
+    border-radius: 10px;
+    padding: 10px;
+}*/
 .card img{
     width: 100%;
+    height: 200px; /* Puedes ajustar esta altura */
+    object-fit: cover; /* También puedes usar "contain" si prefieres ver toda la imagen */
+    border-radius: 5px;
 }
 .card a, footer a {
     color: rgb(255, 255, 255);
@@ -625,6 +664,13 @@ nav ul li a:hover {
     padding: 15px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Añade animación suave */
+}
+
+.card-curso :hover{
+    transform: scale(1.10);
+    z-index: 1;
+    transition: transform 0.3s ease; /* Añade animación suave */
 }
 
 
@@ -759,6 +805,13 @@ a.btn-purple:hover {
     /*background-color: #ffffff;*/
     border-radius: 10px;
     /*margin: 0 10px;*/
+}
+
+.red-social:hover{
+    transform: scale(1.20); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    border: 2px solid #6f00ff; /* Cambia el color del borde a azul en hover */
+    filter: brightness(1); /* Devuelve el brillo normal de la imagen */
+    z-index: 1; /* Asegura que la imagen ampliada esté por encima de las demás */
 }
 
 footer{
