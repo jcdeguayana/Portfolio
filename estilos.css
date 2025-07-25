@@ -164,6 +164,8 @@ nav ul li a:hover {
     background: transparent;
     gap: 0.65rem;
     cursor: pointer;
+    padding-top: 5%;
+    padding-left: 5%;
 }
 
 .menu-button > div {
